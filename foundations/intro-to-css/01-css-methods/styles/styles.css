@@ -1,0 +1,8 @@
+/* Example of an external styles.css sheet  */
+div {
+    color: white;
+    background-color: red;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
