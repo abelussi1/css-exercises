@@ -1,0 +1,16 @@
+/* CSS Grouping in use */
+.pickMe
+.noMe {
+    font-size: 28px;
+    /* Font family names > 3 char should be in "" */
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.pickMe {
+    background-color: black;
+    color: white;
+}
+
+.noMe {
+    background-color: yellow;
+}
