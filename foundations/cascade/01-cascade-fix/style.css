@@ -1,0 +1,67 @@
+/* My first solution to this problem, while valid, does not effectively use the rules of the cascade in an efficient manner
+My first solution leverages the specificity of the chain selector to increase importance. However, many areas of improvements were overlooked
+
+Consider for example, the solution to the button problem. If I had paid attention to the ID, I could have easily swapped .button.confirm for #confirm-button
+
+The .small-para issue could have been fixed by moving its position south of its neighbor, .para, taking advantage of the rule order 
+
+The solution to the last problem was really interesting, and I should definitely pay attention to how to chain selectors and descendant combinators compete with another for importance 
+Both the chain selector and the descendant combinator had (1) level five [type] and (1) level four [class]. The rule of order ultimately settled the dispute */
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
+
+/* MOVE .small-para below .para. They have the same specificity (class) */
+/* THUS, we take advantage of the rule order   */
+.para {
+  font-size: 22px;
+}
+
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* LOOK at the HTML. There are IDs for the two buttons */
+/* MAKE USE of these IDs. ID (3) over Class (4) */
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+
+/* FOR THE last solution, .child will be replaced in order and specificity with div .child  */
+/* WE MUST change the order because the specificity of both the chain selector and */
+/* descendant combinator are the same: (1) level five [type] and (1) level four [class] */
+/* .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+} */
+
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
+
+div .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
