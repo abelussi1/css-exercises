@@ -3,6 +3,7 @@
     background-color: yellow;
     color: red;
     font-size: 20px;
+    text-align: center;
 }
 
 /* Descendent combinator on type */
@@ -21,6 +22,7 @@
     text-align: center;
 } */
 
+/* Descendent combinator mixed class and type */
 /* .container p {
     background-color: yellow;
     color: red;
