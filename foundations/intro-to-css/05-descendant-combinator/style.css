@@ -1,0 +1,29 @@
+/* Descendent combinator on class */
+.container .text {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+}
+
+/* Descendent combinator on type */
+/* div p {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+} */
+
+/* Descendent combinator mixed type and class */
+/* div .text {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+} */
+
+/* .container p {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+} */
